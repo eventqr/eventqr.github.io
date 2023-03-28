@@ -2,8 +2,9 @@
 
 ## API
 
-1. App scans connection QR code. The code contains only an URL.
-   The app makes a POST request to the URL:
+### 1. App scans connection QR code. The code contains only an URL.
+
+The app makes a POST request to the URL:
 
 POST {url}
 
@@ -16,7 +17,7 @@ interface ConnectData {
 }
 ```
 
-2. Server must respond with the following data format:
+### 2. Server must respond with the following data format:
 
 HTTP 200
 
@@ -38,7 +39,7 @@ interface ConnectFailedResponse {
 }
 ```
 
-3. App enters scan mode mode. For each scanned QR code app makes a POST request to the URL from step 2 with token from step 2:
+### 3. App enters scan mode mode. For each scanned QR code app makes a POST request to the URL from step 2 with token from step 2:
 
 POST {url}
 Authorization: Token {token}
@@ -50,7 +51,7 @@ interface ScanData {
 }
 ```
 
-4. Server must respond in the following format:
+### 4. Server must respond in the following format:
 
 HTTP 200
 
@@ -70,7 +71,8 @@ interface ScanSuccessResponse {
 }
 ```
 
-HTTP 403 | 404
+HTTP 403
+HTTP 404
 
 ```ts
 interface ScanFailedResponse {
