@@ -60,7 +60,6 @@ interface ScanSuccessResponse {
   success: boolean;
   header: string;
   message?: string[];
-  info?: string[];
   color?: string;
   backgroundColor?: string;
   services?: {
