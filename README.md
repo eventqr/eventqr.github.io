@@ -69,13 +69,3 @@ interface ScanSuccessResponse {
   }[];
 }
 ```
-
-HTTP 403
-HTTP 404
-
-```ts
-interface ScanFailedResponse {
-  error: string;
-  info?: string[];
-}
-```
